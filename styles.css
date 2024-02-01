@@ -1,0 +1,145 @@
+:root{
+    /* ||Color Palette */
+
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --darkGrey: hsl(0, 0%, 12%);
+    --offBlack: hsl(0, 0%, 8%);
+}
+
+/* CSS reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importing Fonts */
+
+@font-face {
+    font-family: "Inter";
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+
+/*  */
+body{
+    min-width: 375px;
+    min-height: 100vh;
+    background-color: var(--offBlack);
+
+    font-family: "Inter", sans-serif;
+    color: var(--white);
+
+    display: grid;
+    grid-template-columns: 90%;
+    place-items: center;
+    justify-content: center;
+}
+
+
+/* Main Container */
+main{
+    width: 310px;
+    height: 70vh;
+    padding: 1.4rem;
+    background-color: var(--darkGrey);
+    border-radius: 15px;
+
+
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
+    grid-row-gap: 1rem;
+    justify-content: center;
+
+}
+
+/* common styles */
+figcaption, button{
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+/*------- Profile Container----------- */
+figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+/* Profile Image */
+img{
+    width: 80px;
+    border-radius: 50%;
+    
+}
+
+
+/* Profile Name */
+h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/* Profile Location */
+.location{
+    font-weight: 600;
+    padding-top: 0.5rem;
+    margin-bottom: 1.3rem;
+    color: var(--green);
+}
+
+.role{
+    margin-bottom: 0.6rem;
+}
+
+
+/* ---------Social-Links Container------- */
+div{
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+/* Links Buttons */
+button{
+    background-color: var(--grey);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+
+    padding-block: 12px;
+    font-weight: 600;
+}
+
+/* Active states of buttons */
+button:hover, button:focus{
+    background-color: var(--green);
+    color: var(--offBlack);
+    cursor: pointer;
+}
+
+
+/* -----Responsive for desktop / tablet screen */
+
+@media (min-width: 768px){
+    main{
+        width: 340px;
+        padding: 1rem;
+
+        align-content: center;
+        justify-content: stretch;
+    }
+}
